@@ -1,0 +1,267 @@
+
+
+/* 清除元素默认内外边距 */
+*
+{
+    margin:0;
+    padding:0;
+}
+
+body
+{
+    background-color: #FFF2F2;
+}
+
+.header
+{
+    height: 150px;
+    background-color: #FFDCDC;
+}
+
+.title
+{
+    text-align: center;
+    line-height: 150px;
+    color:#A50E46;
+    font-family: "Microsoft YaHei", Arial, sans-serif;
+    font-size: 52px;
+    font-weight: bold;
+}
+
+.table
+{
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    margin-top: 300px;
+    margin-bottom: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.row
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.cell
+{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+    border: 0px;
+    font-family: "Microsoft YaHei", Arial, sans-serif;
+    font-size: 36px;
+    border-radius: 30px;
+    background-color: #FFDCDC;
+    color:#FF8F8F;
+}
+
+/* .cell1
+{
+    background-color: #FFDCDC;
+    color:#FF8F8F;
+} */
+
+/* .cell2
+{
+    background-color: #FFB5BF;
+    color: #E55088;;
+}
+
+.cell3
+{
+    background-color: #FF8F8F;
+    color:#D91513;
+}
+
+.cell4
+{
+    background-color: #F35151;
+    color:#AA002A;
+} */
+
+.cellEnd
+{
+    width: 680px;
+    /* font-family: "Microsoft YaHei", Arial, sans-serif;
+    font-size: 36px;
+    border-radius: 20px;
+    background-color: #F35151;
+    color:#AA002A; */
+}
+
+.mask 
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 62px;
+    height: 70px;
+    background: url("../img/peach.png") no-repeat center center;
+    background-size: cover;
+    z-index: 10;
+    opacity: 0;
+    /* transition: opacity 0.5s ease; */
+    transform: translate(-50%, -50%);
+}
+
+.main
+{
+    display: flex;
+    width: 800px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+}
+
+button.playButtom
+{
+    width: 300px;
+    height: 200px;
+    margin:30px;
+    background-color: #FFDCDC;
+    color: #FF8F8F;
+    font-family: "Microsoft YaHei", Arial, sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    border: 0px;
+    border-radius: 100px;
+}
+
+.el-button i 
+{
+    margin-right: 8px;
+}
+
+button.playButtom:hover
+{
+    background-color: #FF8F8F;
+    color: #FFFFFF;
+}
+
+.overlay 
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(118, 86, 86, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.overlayText 
+{
+    color: #A7062C;
+    font-family: "Microsoft YaHei", Arial, sans-serif;
+    font-size: 72px;
+    font-weight: bold;
+    text-align: center;
+    padding: 100px;
+}
+
+.dice1
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 500px;
+    background-size: cover;
+    z-index: 50;
+    opacity: 0;
+    /* transition: opacity 0.5s ease; */
+    transform: translate(-50%, -50%);
+    background: url("../img/dice1.png") no-repeat center center;
+}
+
+.dice2
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 500px;
+    background-size: cover;
+    z-index: 50;
+    opacity: 0;
+    /* transition: opacity 0.5s ease; */
+    transform: translate(-50%, -50%);
+    background: url("../img/dice2.png") no-repeat center center;
+}
+
+.dice3
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 500px;
+    background-size: cover;
+    z-index: 50;
+    opacity: 0;
+    /* transition: opacity 0.5s ease; */
+    transform: translate(-50%, -50%);
+    background: url("../img/dice3.png") no-repeat center center;
+}
+
+.dice4
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 500px;
+    background-size: cover;
+    z-index: 50;
+    opacity: 0;
+    /* transition: opacity 0.5s ease; */
+    transform: translate(-50%, -50%);
+    background: url("../img/dice4.png") no-repeat center center;
+}
+
+.dice5
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 500px;
+    background-size: cover;
+    z-index: 50;
+    opacity: 0;
+    /* transition: opacity 0.5s ease; */
+    transform: translate(-50%, -50%);
+    background: url("../img/dice5.png") no-repeat center center;
+}
+
+.dice6
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 500px;
+    background-size: cover;
+    z-index: 50;
+    opacity: 0;
+    /* transition: opacity 0.5s ease; */
+    transform: translate(-50%, -50%);
+    background: url("../img/dice6.png") no-repeat center center;
+}
