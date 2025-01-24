@@ -500,7 +500,7 @@ async function confirmButtonOnclick()
     
     localStorage.setItem("spankChessDatas",JSON.stringify(setDatas));
 
-    alert("设置成功");
+    // alert("设置成功");
 
     // 跳转index页面
     window.location.href = "../index.html";
