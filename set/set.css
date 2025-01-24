@@ -28,9 +28,10 @@ body
     font-weight: bold;
 }
 
-.image
+.table
 {
     display: flex;
+    flex-direction: column;
     height: 50vh;
     margin-top: 300px;
     margin-bottom: 200px;
@@ -38,6 +39,36 @@ body
     margin-right: auto;
     justify-content: center;
     align-items: center;
+    border-collapse: collapse;
+    overflow-y: auto;
+}
+
+header
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+thead 
+{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    display: flex;
+}
+
+tbody 
+{
+    display: block;
+    max-height: 50vh;
+    overflow-y: auto;
+}
+
+.row
+{
+    display: flex;
+    flex-direction: row;
 }
 
 .main
@@ -76,4 +107,273 @@ button.playButtom:hover
 {
     background-color: #FF8F8F;
     color: #FFFFFF;
+}
+
+.name input
+{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 30px;
+    margin: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 0px;
+    font-family: "Microsoft YaHei", Arial, sans-serif;
+    font-size: 14px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    border: 3px solid #FFDCDC;
+    color:#A7062C;
+}
+
+.ex
+{
+    display: flex;
+    align-items: center;
+    width: 90px;
+    height: 30px;
+    margin: 10px;
+    border: 0px;
+    font-family: "Microsoft YaHei", Arial, sans-serif;
+    font-size: 14px;
+    background-color: #FFF2F2;
+    color:#A7062C;
+}
+
+.ex input
+{
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.min input
+{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 30px;
+    margin: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 0px;
+    font-family: "Microsoft YaHei", Arial, sans-serif;
+    font-size: 14px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    border: 3px solid #FFDCDC;
+    color:#A7062C;
+}
+
+.min input:disabled
+{
+    background-color: #EEEEEE;
+}
+
+.max input
+{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 30px;
+    margin: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 0px;
+    font-family: "Microsoft YaHei", Arial, sans-serif;
+    font-size: 14px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    border: 3px solid #FFDCDC;
+    color:#A7062C;
+}
+
+.max input:disabled
+{
+    background-color: #EEEEEE;
+}
+
+.desc input
+{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 30px;
+    margin: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 0px;
+    font-family: "Microsoft YaHei", Arial, sans-serif;
+    font-size: 14px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    border: 3px solid #FFDCDC;
+    color:#A7062C;
+}
+
+.desc input:disabled
+{
+    background-color: #EEEEEE;
+}
+
+.tableButton button
+{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 30px;
+    margin: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 0px;
+    font-family: "Microsoft YaHei", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 100px;
+    background-color: #FFDCDC;
+    color:#FF8F8F;
+}
+
+.headerName
+{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 30px;
+    /* margin: 10px; */
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: "Microsoft YaHei", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    border-left: 3px solid #FF8F8F;
+    border-right: 1.5px solid #FF8F8F;
+    background-color: #FFF2F2;
+    color:#A7062C;
+}
+
+.headerEx
+{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 110px;
+    height: 30px;
+    /* margin: 10px; */
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: "Microsoft YaHei", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    border-left: 1.5px solid #FF8F8F;
+    border-right: 1.5px solid #FF8F8F;
+    background-color: #FFF2F2;
+    color:#A7062C;
+}
+
+.headerMin
+{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 30px;
+    /* margin: 10px; */
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: "Microsoft YaHei", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    border-left: 1.5px solid #FF8F8F;
+    border-right: 1.5px solid #FF8F8F;
+    background-color: #FFF2F2;
+    color:#A7062C;
+}
+
+.headerMax
+{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 30px;
+    /* margin: 10px; */
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 0px;
+    font-family: "Microsoft YaHei", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    border-left: 1.5px solid #FF8F8F;
+    border-right: 1.5px solid #FF8F8F;
+    background-color: #FFF2F2;
+    color:#A7062C;
+}
+
+.headerDesc
+{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    height: 30px;
+    /* margin: 10px; */
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 0px;
+    font-family: "Microsoft YaHei", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    border-left: 1.5px solid #FF8F8F;
+    border-right: 1.5px solid #FF8F8F;
+    background-color: #FFF2F2;
+    color:#A7062C;
+}
+
+.headerTableButton
+{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 30px;
+    /* margin: 10px; */
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 0px;
+    font-family: "Microsoft YaHei", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    border-left: 1.5px solid #FF8F8F;
+    border-right: 3px solid #FF8F8F;
+    background-color: #FFF2F2;
+    color:#A7062C;
 }
