@@ -230,9 +230,9 @@ button.playButtom:hover
 
 .tableButton button
 {
-    display: flex;
-    flex-direction: column;
-    position: relative;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* position: relative; */
     align-items: center;
     justify-content: center;
     width: 80px;
@@ -363,7 +363,7 @@ button.playButtom:hover
     position: relative;
     align-items: center;
     justify-content: center;
-    width: 100px;
+    width: 200px;
     height: 30px;
     /* margin: 10px; */
     padding-left: 10px;
