@@ -1,4 +1,7 @@
 
+// 定义全局变量
+var rowId = 0;
+
 // 等待页面加载
 document.addEventListener("DOMContentLoaded",function()
 {
@@ -178,6 +181,9 @@ async function setTable()
 
     for(let i=0;i<datas.length;i++)
     {
+        // 修改ID
+        rowId = rowId+1;
+
         let tbody = table.getElementsByTagName("tbody")[0];
         if (!tbody)
         {
@@ -203,8 +209,8 @@ async function setTable()
             rowData = rowData+
             `<td>
                 <div class="ex">
-                    <input type="radio" name="附加刑${i}" value="是" checked onclick="changeRadio()" /> 是
-                    <input type="radio" name="附加刑${i}" value="否" onclick="changeRadio()" /> 否
+                    <input type="radio" name="附加刑${rowId}" value="是" checked onclick="changeRadio()" /> 是
+                    <input type="radio" name="附加刑${rowId}" value="否" onclick="changeRadio()" /> 否
                 </div>
             </td>`;
         }
@@ -213,8 +219,8 @@ async function setTable()
             rowData = rowData+
             `<td>
                 <div class="ex">
-                    <input type="radio" name="附加刑${i}" value="是" onclick="changeRadio()" /> 是
-                    <input type="radio" name="附加刑${i}" value="否" checked onclick="changeRadio()" /> 否
+                    <input type="radio" name="附加刑${rowId}" value="是" onclick="changeRadio()" /> 是
+                    <input type="radio" name="附加刑${rowId}" value="否" checked onclick="changeRadio()" /> 否
                 </div>
             </td>`;
         }
@@ -287,7 +293,7 @@ async function setTable()
         `<td>
             <div class="tableButton">
                 <button type="button" onclick="addRow()">+ 添加</button>
-                <!-- <button type="button" onclick="deleteRow(this)">删除</button> -->
+                <button type="button" onclick="deleteRow(this)">－ 删除</button>
             </div>
         </td>`;
 
@@ -295,14 +301,23 @@ async function setTable()
     }
 }
 
+function deleteRow(button)
+{
+    let row = button.closest('tr');
+    row.remove();
+}
+
 function addRow()
 {
+    // 修改ID
+    rowId = rowId+1;
+
     let table = document.getElementById("table");
     let tbody = table.getElementsByTagName("tbody")[0];
     if (!tbody) 
     {
         tbody = document.createElement("tbody");
-        document.getElementById("table").appendChild(tbody);
+        table.appendChild(tbody);
     }
     let row = tbody.insertRow();
     let rowData = "";
@@ -315,12 +330,12 @@ function addRow()
         </div>
     </td>`;
 
-    //附加刑
+    //附加刑 tbody.rows.length+1
     rowData = rowData+
     `<td>
         <div class="ex">
-            <input type="radio" name="附加刑${tbody.rows.length+1}" value="是" onclick="changeRadio()" /> 是
-            <input type="radio" name="附加刑${tbody.rows.length+1}" value="否" checked onclick="changeRadio()" /> 否
+            <input type="radio" name="附加刑${rowId}" value="是" onclick="changeRadio()" /> 是
+            <input type="radio" name="附加刑${rowId}" value="否" checked onclick="changeRadio()" /> 否
         </div>
     </td>`;
 
@@ -353,7 +368,7 @@ function addRow()
     `<td>
         <div class="tableButton">
             <button type="button" onclick="addRow(this)">+ 添加</button>
-            <!-- <button type="button" onclick="deleteRow(this)">删除</button> -->
+            <button type="button" onclick="deleteRow(this)">－ 删除</button>
         </div>
     </td>`;
 
